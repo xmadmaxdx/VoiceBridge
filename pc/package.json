@@ -1,0 +1,23 @@
+{
+  "name": "voicebridge-pc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PC side of VoiceBridge: routes phone speech into a running Freebuff TUI and speaks agent updates back",
+  "type": "commonjs",
+  "bin": {
+    "vb": "bin/vb.js"
+  },
+  "scripts": {
+    "test": "node --test test/voicebridge.test.js",
+    "start": "node bin/vb.js start --wrap freebuff",
+    "serve": "node bin/vb.js serve",
+    "doctor": "node bin/vb.js doctor"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "node-pty": "^1.0.0",
+    "ws": "^8.22.1"
+  }
+}
